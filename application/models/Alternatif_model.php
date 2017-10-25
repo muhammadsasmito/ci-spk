@@ -10,6 +10,23 @@ class Alternatif_model extends CI_Model {
 		return TRUE;
 	}
 
+	public function ubah_data($data,$id)
+	{
+		# code...
+		$this->db->where('id', $id);
+		$this->db->update('alternatif', $data);
+		return TRUE;
+	}
+
+	public function baca_alternatif($id)
+	{
+		# code...
+		$query = $this->db->get_where('alternatif',array(
+			'id' => $id
+		));
+		return $query->row();
+	}
+
 	public function data_alternatif()
 	{
 		# code...

@@ -36,7 +36,10 @@
                             <td>
                                 <?php echo $item->gambar; ?>
                             </td>
-
+                            <td>
+                                <a class="btn btn-warning" href="<?php echo base_url(); ?>alternatif/ubah/<?php echo $item->id; ?>">Ubah</a>
+                                <a class="btn btn-danger" href="">Hapus</a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
