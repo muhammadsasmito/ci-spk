@@ -33,4 +33,11 @@ class Alternatif_model extends CI_Model {
 		$query = $this->db->get('alternatif');
 		return $query->result();
 	}
+	
+	public function hapus_data($id)
+	{
+		# code...
+		$this->db->delete('alternatif', array('id' => $id));
+		return TRUE;
+	}
 }

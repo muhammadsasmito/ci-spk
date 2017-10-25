@@ -78,4 +78,12 @@ class Alternatif extends CI_Controller {
 
 		redirect('alternatif');
 	}
+
+	public function hapus($id)
+	{
+		# code...
+		$this->alternatif_model->hapus_data($id);
+		
+		redirect('alternatif');
+	}
 }
